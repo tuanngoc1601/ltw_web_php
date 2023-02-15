@@ -32,7 +32,6 @@
     border-radius: none;
     cursor: pointer;
 	}
-}
 </style>
 
 <form action="" method="POST">

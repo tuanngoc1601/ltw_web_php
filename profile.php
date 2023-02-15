@@ -42,12 +42,12 @@
     		<tr>
     			<td>Tên</td>
     			<td>:</td>
-    			<td><?php echo $result['cusname']; ?></td>
+    			<td><?php echo $result['name']; ?></td>
     		</tr>
     		<tr>
     			<td>Thành phố</td>
     			<td>:</td>
-    			<td><?php echo $result['cuscity']; ?></td>
+    			<td><?php echo $result['city']; ?></td>
     		</tr>
     		<tr>
     			<td>Điện thoại</td>
@@ -57,7 +57,7 @@
     		<tr>
     			<td>Quốc gia</td>
     			<td>:</td>
-    			<td><?php echo $result['cuscountry']; ?></td>
+    			<td><?php echo $result['country']; ?></td>
     		</tr> 
     		<tr>
     			<td>Zipcode</td>
@@ -72,7 +72,7 @@
     		<tr>
     			<td>Địa chỉ</td>
     			<td>:</td>
-    			<td><?php echo $result['cusaddress']; ?></td>
+    			<td><?php echo $result['address']; ?></td>
     		</tr>
             <tr>
                 <td colspan="3"><a href="editprofile.php">Cập nhật</a></td>

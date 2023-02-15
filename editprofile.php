@@ -51,12 +51,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save'])){
                          <td>Tên</td>
                          <td>:</td>
 
-                         <td><input type="text" name="name" value="<?php echo $result['cusname']; ?>"></td>
+                         <td><input type="text" name="name" value="<?php echo $result['name']; ?>"></td>
                      </tr>
                      <tr>
                          <td>Thành phố</td>
                          <td>:</td>
-                         <td><input type="text" name="city" value="<?php echo $result['cuscity']; ?>"></td>
+                         <td><input type="text" name="city" value="<?php echo $result['city']; ?>"></td>
                          
                      </tr>
                      <tr>
@@ -80,7 +80,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save'])){
                      <tr>
                          <td>Địa chỉ</td>
                          <td>:</td>
-                         <td><input type="text" name="address" value="<?php echo $result['cusaddress']; ?>"></td>
+                         <td><input type="text" name="address" value="<?php echo $result['address']; ?>"></td>
                          
                      </tr>
                      <tr>

@@ -20,8 +20,8 @@
     	$shifted = $ct->shifted($id,$proid,$qty,$time,$price);
     	$update_product_soldout = $ct->update_product_soldout($proid,$qty);
     	$get_email = $ct->get_email_customer($cusid);
-        var_dump($cusid);
-        var_dump($get_email);
+        // var_dump($cusid);
+        // var_dump($get_email);
     	if($get_email){
     		$result_customer = $get_email->fetch_assoc();
     	}

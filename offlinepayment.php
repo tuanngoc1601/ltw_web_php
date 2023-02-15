@@ -148,7 +148,6 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
                     <table class="tblone">
                         <?php
                         $id = Session::get('customer_id');
-                        var_dump($id);
                         $get_customers = $cs->show_customers($id);
                         if ($get_customers) {
                             while ($result = $get_customers->fetch_assoc()) {
@@ -157,12 +156,12 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
                                 <tr>
                                     <td>Tên</td>
                                     <td>:</td>
-                                    <td><?php echo $result['cusname']; ?></td>
+                                    <td><?php echo $result['name']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Thành Phố</td>
                                     <td>:</td>
-                                    <td><?php echo $result['cuscity']; ?></td>
+                                    <td><?php echo $result['city']; ?></td>
                                 </tr>
                                 <tr>
                                     <td>Số điện thoại</td>
@@ -187,7 +186,7 @@ if (isset($_GET['orderid']) && $_GET['orderid'] == 'order') {
                                 <tr>
                                     <td>Địa chỉ</td>
                                     <td>:</td>
-                                    <td><?php echo $result['cusaddress']; ?></td>
+                                    <td><?php echo $result['address']; ?></td>
                                 </tr>
                                 <tr>
                                     <td colspan="3"><a href="editprofile.php">Cập nhật thông tin</a></td>

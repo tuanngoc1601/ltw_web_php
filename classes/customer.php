@@ -65,8 +65,8 @@ class customer
             if ($result_check != false) {
                 $value = $result_check->fetch_assoc();
                 Session::set('customer_login', true);
-                Session::set('customer_id', $value['cusId']);
-                Session::set('customer_name', $value['cusname']);
+                Session::set('customer_id', $value['id']);
+                Session::set('customer_name', $value['name']);
                 header('Location:order.php');
             } else {
                 $alert = "<span class='error'>Tài khoản hoặc mật khẩu không đúng</span>";
@@ -93,7 +93,7 @@ class customer
             $alert = "<span class='error'>Không được để trống</span>";
             return $alert;
         } else {
-            $query = "UPDATE tbl_customer SET cusname='$name',zipcode='$zipcode',email='$email',cusaddress='$address',phone='$phone',cuscity='$city' WHERE cusid ='$id'";
+            $query = "UPDATE tbl_customer SET name='$name',zipcode='$zipcode',email='$email',address='$address',phone='$phone',city='$city' WHERE id ='$id'";
             $result = $this->db->insert($query);
             if ($result) {
                 $alert = "<span class='success'>Đã cập nhật thành công</span>";
@@ -104,9 +104,9 @@ class customer
             }
         }
     }
-    public function insert_comment_customer($date, $id)
+    public function insert_comment_customer($date)
     {
-        $id = mysqli_real_escape_string($this->db->link, $id);
+        // $id = mysqli_real_escape_string($this->db->link, $id);
         $name = mysqli_real_escape_string($this->db->link, $date['name']);
         $email = mysqli_real_escape_string($this->db->link, $date['email']);
         $phone = mysqli_real_escape_string($this->db->link, $date['phone']);
@@ -115,7 +115,7 @@ class customer
             $alert = "<span class='error'>không được để trống</span>";
             return $alert;
         } else {
-            $query = "INSERT INTO tbl_comment(cusid,name,email,phone,comment) VALUES ('$id','$name','$email','$phone','$comment') ";
+            $query = "INSERT INTO tbl_comment(customer_name,customer_email,customer_phone,customer_comment) VALUES ('$name','$email','$phone','$comment') ";
             $result = $this->db->insert($query);
             if ($result) {
                 $alert = "<span class='success'>Đã gửi bình luận của bạn đến admin</span>";
@@ -134,7 +134,7 @@ class customer
     }
     public function del_comment($id)
     {
-        $query = "DELETE FROM tbl_comment where cusId = '$id' ";
+        $query = "DELETE FROM tbl_comment where id = '$id' ";
         $result = $this->db->delete($query);
         if ($result) {
             $alert = "<span class='success'>Đã xóa</span>";

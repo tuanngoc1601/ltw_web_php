@@ -18,7 +18,7 @@
     $id = Session::get('customer_id');
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
         // LẤY DỮ LIỆU TỪ PHƯƠNG THỨC Ở FORM POST
-        $insert_comment_customer = $cs -> insert_comment_customer($_POST, $id); // hàm check catName khi submit lên
+        $insert_comment_customer = $cs -> insert_comment_customer($_POST); // hàm check catName khi submit lên
     } 
  ?>
  <div class="main">

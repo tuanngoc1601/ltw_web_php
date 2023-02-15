@@ -91,7 +91,7 @@ if (isset($_GET['confirmid'])) {
                                 } elseif ($result['status'] == 1) {
                                 ?>
                                     <td>
-                                        <a href="?confirmid=<?php echo $customer_id ?>&price=<?php echo $result['price'] ?>&time=<?php echo $result['date_order'] ?>">Đã được xác nhận(click vào đây nếu đã nhận hàng)</a>
+                                        <a href="?confirmid=<?php echo $result['id'] ?>&price=<?php echo $result['price'] ?>&time=<?php echo $result['date_order'] ?>">Đã được xác nhận(click vào đây nếu đã nhận hàng)</a>
                                     </td>
                                 <?php
                                 } else {

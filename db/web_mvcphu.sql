@@ -90,17 +90,17 @@ CREATE TABLE `tbl_cart` (
 -- Đang đổ dữ liệu cho bảng `tbl_cart`
 --
 
-INSERT INTO `tbl_cart` (`cartId`, `productId`, `sId`, `productName`, `price`, `quantity`, `image`) VALUES
-(1, 7, '0omn99jipm7namf6srjhj4kva2', 'Äiá»‡n thoáº¡i samsung S10+', '12000000', 3, '6deaf01c29.jpg'),
-(2, 7, 'up8l6ff347ik19fsoa18qff452', 'Äiá»‡n thoáº¡i samsung S10+', '12000000', 1, '6deaf01c29.jpg'),
-(3, 7, '9lmppj5kalib60o1s7soiiaqo4', 'Äiá»‡n thoáº¡i samsung S10+', '12000000', 1, '6deaf01c29.jpg'),
-(4, 8, '9lmppj5kalib60o1s7soiiaqo4', 'Äiá»‡n Thoáº¡i Huawei Pro', '5000000', 1, 'd611667f13.jpg'),
-(8, 6, 'c6o66m1rfnpfhqmdffk77pu083', 'MÃ¡y tÃ­nh Dell A503', '10000000', 1, 'dbb417a309.jpg'),
-(9, 8, '3e1a29t1pgb3ock6s8hi8ho2d5', 'Äiá»‡n Thoáº¡i Huawei Pro', '5000000', 1, 'd611667f13.jpg'),
-(13, 17, 'grfc2bmmrmga6mn5q7484i87f2', 'á»” Cá»©ng SSD Samsung 860 Evo 250GB Sata III 2.5 inch - HÃ ng Nháº­p Kháº©u', '1099000', 1, '785e8d373d.jpg'),
-(14, 19, '39p4lauudimhcb91i8mhna4bf2', 'Äá»“ng Há»“ ThÃ´ng Minh Apple Watch Series 4 GPS Aluminum Case With Sport Loop', '9700000', 3, '6d72eb58ae.jpg'),
-(18, 18, '3eg83l0tcklmed91e5h8raqsa2', 'Laptop Dell G7 7588 N7588A Core i7-8750H/Win10 (15.6 inch)', '2589900', 1000, '32942e9470.jpg'),
-(19, 19, 'hlkksgphiqn70b37sjg3u89unu', 'Äá»“ng Há»“ ThÃ´ng Minh Apple Watch Series 4 GPS Aluminum Case With Sport Loop', '9700000', 1, '6d72eb58ae.jpg');
+-- INSERT INTO `tbl_cart` (`cartId`, `productId`, `sId`, `productName`, `price`, `quantity`, `image`) VALUES
+-- (1, 7, '0omn99jipm7namf6srjhj4kva2', 'Äiá»‡n thoáº¡i samsung S10+', '12000000', 3, '6deaf01c29.jpg'),
+-- (2, 7, 'up8l6ff347ik19fsoa18qff452', 'Äiá»‡n thoáº¡i samsung S10+', '12000000', 1, '6deaf01c29.jpg'),
+-- (3, 7, '9lmppj5kalib60o1s7soiiaqo4', 'Äiá»‡n thoáº¡i samsung S10+', '12000000', 1, '6deaf01c29.jpg'),
+-- (4, 8, '9lmppj5kalib60o1s7soiiaqo4', 'Äiá»‡n Thoáº¡i Huawei Pro', '5000000', 1, 'd611667f13.jpg'),
+-- (8, 6, 'c6o66m1rfnpfhqmdffk77pu083', 'MÃ¡y tÃ­nh Dell A503', '10000000', 1, 'dbb417a309.jpg'),
+-- (9, 8, '3e1a29t1pgb3ock6s8hi8ho2d5', 'Äiá»‡n Thoáº¡i Huawei Pro', '5000000', 1, 'd611667f13.jpg'),
+-- (13, 17, 'grfc2bmmrmga6mn5q7484i87f2', 'á»” Cá»©ng SSD Samsung 860 Evo 250GB Sata III 2.5 inch - HÃ ng Nháº­p Kháº©u', '1099000', 1, '785e8d373d.jpg'),
+-- (14, 19, '39p4lauudimhcb91i8mhna4bf2', 'Äá»“ng Há»“ ThÃ´ng Minh Apple Watch Series 4 GPS Aluminum Case With Sport Loop', '9700000', 3, '6d72eb58ae.jpg'),
+-- (18, 18, '3eg83l0tcklmed91e5h8raqsa2', 'Laptop Dell G7 7588 N7588A Core i7-8750H/Win10 (15.6 inch)', '2589900', 1000, '32942e9470.jpg'),
+-- (19, 19, 'hlkksgphiqn70b37sjg3u89unu', 'Äá»“ng Há»“ ThÃ´ng Minh Apple Watch Series 4 GPS Aluminum Case With Sport Loop', '9700000', 1, '6d72eb58ae.jpg');
 
 -- --------------------------------------------------------
 
@@ -124,10 +124,22 @@ INSERT INTO `tbl_category` (`catId`, `catName`) VALUES
 (6, 'Accessories'),
 (7, 'Software'),
 (15, 'Test'),
-(16, 'Äá»“ng Há»“ ThÃ´ng Minh'),
-(17, 'Thiáº¿t bá»‹ máº¡ng');
+(16, 'Thiết bị thông minh'),
+(17, 'Thiết bị mạng doanh nghiệp');
 
 -- --------------------------------------------------------
+
+
+--
+-- Cấu trúc bảng cho bảng `tbl_comment`
+--
+CREATE TABLE `tbl_comment` (
+  `id` int(11) NOT NULL,
+  `customer_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_phone` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `customer_comment` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Cấu trúc bảng cho bảng `tbl_compare`
@@ -165,9 +177,7 @@ CREATE TABLE `tbl_customer` (
 --
 
 INSERT INTO `tbl_customer` (`id`, `name`, `address`, `city`, `country`, `zipcode`, `phone`, `email`, `password`) VALUES
-(3, 'Ng.Anh tu', '113 Láº¡c Long QuÃ¢n HCM', 'TPHCM', 'hcm', '700000', '099999123', 'thanhviendangki@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(4, 'vÃµ thá»‹ tháº£o nguyÃªn', '149 LÅ©y BÃ¡n BÃ­ch, phÆ°á»ng TÃ¢n Thá»›i HÃ²a, quáº­n TÃ¢n PhÃº, TP.HCM', 'TPHCM', 'hcm', '700000', '522525294', 'hoathuytinh071@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(5, 'Sin', '149 LÃ½ ThÃ¡i Tá»•', 'TPHCM', 'hcm', '700000', '0522525294', 'abc@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
+(7, 'Tuan Ngoc', '153 Hung Thanh, Hung Hoa B', 'Ho Chi Minh', 'Viet Nam', '700000', '0338597737', 'abc@gmail.com', '1f5bcd9d6f3df4a37d3026657301909d'),
 
 -- --------------------------------------------------------
 
@@ -191,11 +201,11 @@ CREATE TABLE `tbl_order` (
 -- Đang đổ dữ liệu cho bảng `tbl_order`
 --
 
-INSERT INTO `tbl_order` (`id`, `productId`, `productName`, `customer_id`, `quantity`, `price`, `image`, `status`, `date_order`) VALUES
-(56, 22, 'Apple New For Mysql Server', 3, 5, '300000', '643929ce40.jpg', 1, '2019-07-17 00:54:42'),
-(57, 22, 'Apple New For Mysql Server', 3, 4, '240000', '643929ce40.jpg', 1, '2019-07-17 00:56:49'),
-(58, 22, 'Apple New For Mysql Server', 3, 5, '300000', '643929ce40.jpg', 1, '2019-07-17 00:57:49'),
-(59, 20, 'Router Wifi 4G Huawei 300Mbps B593S-12', 3, 10, '12400000', '49b106217c.jpg', 1, '2019-07-17 01:51:22');
+-- INSERT INTO `tbl_order` (`id`, `productId`, `productName`, `customer_id`, `quantity`, `price`, `image`, `status`, `date_order`) VALUES
+-- (56, 22, 'Apple New For Mysql Server', 3, 5, '300000', '643929ce40.jpg', 1, '2019-07-17 00:54:42'),
+-- (57, 22, 'Apple New For Mysql Server', 3, 4, '240000', '643929ce40.jpg', 1, '2019-07-17 00:56:49'),
+-- (58, 22, 'Apple New For Mysql Server', 3, 5, '300000', '643929ce40.jpg', 1, '2019-07-17 00:57:49'),
+-- (59, 20, 'Router Wifi 4G Huawei 300Mbps B593S-12', 3, 10, '12400000', '49b106217c.jpg', 1, '2019-07-17 01:51:22');
 
 -- --------------------------------------------------------
 
@@ -223,19 +233,20 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`productId`, `productName`, `product_code`, `productQuantity`, `product_soldout`, `product_remain`, `catId`, `brandId`, `product_desc`, `type`, `price`, `image`) VALUES
-(6, 'MÃ¡y tÃ­nh Dell A503', 'MH1122', '50', '0', '50', 3, 10, '<p>M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503</p>', 1, '10000000', 'dbb417a309.jpg'),
-(7, 'Äiá»‡n thoáº¡i samsung S10+', 'MH1123', '60', '0', '60', 5, 6, '<p>Äiá»‡n thoáº¡i samsung S10+Äiá»‡n thoáº¡i samsung S10+Äiá»‡n thoáº¡i samsung S10+Äiá»‡n thoáº¡i samsung S10+Äiá»‡n thoáº¡i samsung S10+</p>', 0, '12000000', 'f71a0935f3.jpg'),
-(8, 'Äiá»‡n Thoáº¡i Huawei Pro', 'MH1124', '70', '0', '70', 5, 8, '<p>Äiá»‡n Thoáº¡i Huawei ProÄiá»‡n Thoáº¡i Huawei ProÄiá»‡n Thoáº¡i Huawei ProÄiá»‡n Thoáº¡i Huawei Pro</p>', 0, '5000000', '03ae5f8327.jpg'),
-(9, 'IPad Xsmax', 'MH1125', '100', '0', '100', 3, 7, '<p>IPad XsmaxIPad XsmaxIPad XsmaxIPad XsmaxIPad XsmaxIPad XsmaxIPad XsmaxIPad Xsmax</p>', 0, '8000000', '7418d9b02e.jpg'),
-(13, 'Äá»“ng Há»“ ThÃ´ng Minh Theo DÃµi Váº­n Äá»™ng Theo DÃµi Sá»©c Khá»e Garmin Forerunner', 'MH1126', '30', '0', '30', 16, 13, '<p>Chá»‘ng nÆ°á»›c 5ATM</p>\r\n<p>Pin sáº¡c Lithium-ion</p>\r\n<p>Cá»•ng káº¿t ná»‘i: Bluetooth Smart vaÌ€ ANT+</p>\r\n<p>Bá»™ nhá»›: 200 giá» dá»¯ liá»‡u hoáº¡t Ä‘á»™ng</p>\r\n<p>M&agrave;n h&igrave;nh: 215 x 180 pixel</p>', 1, '4690000', '25ebd2d0ff.jpg'),
-(15, 'Pháº§n Má»m Diá»‡t Virus BKAV Profressional 1 PC 12 ThÃ¡ng', 'MH1127', '20', '0', '20', 7, 9, '<p>Pháº§n Má»m Diá»‡t Virus BKAV Profressional 1 PC 12 Th&aacute;ngPháº§n Má»m Diá»‡t Virus BKAV Profressional 1 PC 12 Th&aacute;ngPháº§n Má»m Diá»‡t Virus BKAV Profressional 1 PC 12 Th&aacute;ngPháº§n Má»m Diá»‡t Virus BKAV Profressional 1 PC 12 Th&aacute;ngPháº§n Má»m Diá»‡t Virus BKAV Profressional 1 PC 12 Th&aacute;ngPháº§n Má»m Diá»‡t Virus BKAV Profressional 1 PC 12 Th&aacute;ng</p>', 0, '195000', '4167b1a4c5.jpg'),
-(16, 'TP - Link TL- WN725N - USB Wifi Nano Chuáº©n N Tá»‘c Äá»™ 150Mbps', 'MH1128', '90', '0', '90', 17, 14, '<p>Thiáº¿t káº¿ thu nhá» cá»±c gá»n, cá»±c xinh</p>\r\n<p>Tá»‘c Ä‘á»™ kh&ocirc;ng d&acirc;y 150Mbps</p>\r\n<p>M&atilde; h&oacute;a WPA/WPA2 - Báº£o máº­t n&acirc;ng cao</p>\r\n<p>ÄÄ©a CD Ä‘i k&egrave;m cho Hoáº¡t Ä‘á»™ng dá»… d&agrave;ng</p>\r\n<p>Bao b&igrave; sáº£n pháº©m c&oacute; thá»ƒ thay Ä‘á»•i theo tá»«ng Ä‘á»£t h&agrave;ng nháº­p</p>', 0, '125000', '6c53b185b0.jpg'),
-(17, 'á»” Cá»©ng SSD Samsung 860 Evo 250GB Sata III 2.5 inch - HÃ ng Nháº­p Kháº©u', 'MH1129', '100', '0', '100', 7, 6, '<p>2.5 inch - H&agrave;ng Nháº­p Kháº©u</p>', 0, '1099000', '785e8d373d.jpg'),
-(18, 'Laptop Dell G7 7588 N7588A Core i7-8750H/Win10 (15.6 inch)', 'MH1130', '120', '0', '120', 3, 10, '<p>Chip: Intel Core i7-8750H (2.2GHz up to 4.1GHz, 9MB)</p>\r\n<p>RAM: 8GB DDR4 2400MHz</p>\r\n<p>á»” cá»©ng: HDD 1TB 5400rpm + 128GB SSD M.2</p>\r\n<p>Chipset Ä‘á»“ há»a: NVIDIA GeForce GTX 1050Ti 4GB GDDR5</p>\r\n<p>M&agrave;n h&igrave;nh: 15.6 inch Full HD (1920 x 1080) IPS, Anti-Glare, LED Backlit Display</p>\r\n<p>Há»‡ Ä‘iá»u h&agrave;nh: Windows 10 Home</p>\r\n<p>Pin: 4 Cell 56 Whrs</p>', 0, '2589900', '32942e9470.jpg'),
-(19, 'Äá»“ng Há»“ ThÃ´ng Minh Apple Watch Series 4 GPS Aluminum Case With Sport Loop', 'MH1140', '65', '0', '65', 16, 7, '<p>K&iacute;ch thÆ°á»›c m&agrave;n h&igrave;nh c&oacute; 2 loáº¡i: 40mm v&agrave; 44mm</p>\r\n<p>Chuáº©n kh&aacute;ng nÆ°á»›c ISO 22810:2010</p>\r\n<p>Káº¿t ná»‘i: Wi-Fi (802.11b / g / n 2,4 GHz), bluetooth 5.0</p>\r\n<p>TÆ°Æ¡ng th&iacute;ch: iPhone</p>\r\n<p>Chá»©c nÄƒng: CaÌ‰m bi&ecirc;Ìn nhiÌ£p tim, chÆ°Ìc nÄƒng Ä‘o Ä‘i&ecirc;Ì£n t&acirc;m Ä‘&ocirc;Ì€ (EKG)</p>\r\n<p>T&iacute;ch há»£p GPS, GLONASS, Galileo v&agrave; QZSS</p>\r\n<p>Gia tá»‘c Ä‘Æ°á»£c cáº£i thiá»‡n l&ecirc;n tá»›i 32 gâ€‘forces</p>\r\n<p>Th&ocirc;ng b&aacute;o cuá»™c gá»i, tin nháº¯n</p>\r\n<p>C&oacute; thá»ƒ nghe nháº¡c, xem báº£n Ä‘á»“</p>\r\n<p>Thá»i gian sá»­ dá»¥ng l&ecirc;n Ä‘áº¿n 18 giá»</p>\r\n<p>Pin lithium-ion sáº¡c láº¡i Ä‘Æ°á»£c t&iacute;ch há»£p sáºµn</p>', 0, '9700000', '6d72eb58ae.jpg'),
-(20, 'Router Wifi 4G Huawei 300Mbps B593S-12', 'MH1150', '70', '10', '65', 17, 8, '<p>T&ocirc;Ìc Ä‘&ocirc;Ì£ maÌ£ng 4G/LTE FDD link Speed: Downstream: 100Mbps Upstream: 50Mbps</p>\r\n<p>Nhi&ecirc;Ì€u maÌy truy c&acirc;Ì£p vaÌ€ sÆ°Ì‰ duÌ£ng cuÌ€ng m&ocirc;Ì£t thÆ¡Ì€i gian, Ä‘iÌ£a Ä‘i&ecirc;Ì‰m</p>\r\n<p>ThiÌch hÆ¡Ì£p vÆ¡Ìi caÌc loaÌ£i sim 3G, 4G tr&ecirc;n thiÌ£ trÆ°Æ¡Ì€ng hi&ecirc;Ì£n nay</p>\r\n<p>Thi&ecirc;Ìt k&ecirc;Ì sang troÌ£ng, goÌ£n nheÌ£, ti&ecirc;Ì£n lÆ¡Ì£i cho ngÆ°Æ¡Ì€i duÌ€ng</p>', 0, '1240000', '49b106217c.jpg'),
-(21, 'Apple New For Mysql Server', 'MH1115', '48', '0', '61', 17, 14, '<p>Apple New For Mysql Server</p>', 0, '50000', 'ad351ef94f.png'),
-(22, 'Apple New For Mysql Server', 'MH1111', '95', '19', '76', 17, 14, '<p>Apple New For Mysql Server</p>', 0, '60000', '643929ce40.jpg');
+(6, 'Máy Tính Dell A503', 'MH1122', '50', '0', '50', 3, 10, '<p>M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503M&aacute;y t&iacute;nh Dell A503</p>', 1, '10000000', '6164cf5b58.jpg'),
+(7, 'Điện Thoại samsung S10+', 'MH1123', '60', '0', '60', 5, 6, '<p><span>Với một chiếc m&aacute;y cao cấp như&nbsp;Samsung Galaxy S10+ th&igrave; việc đầu ti&ecirc;n cần c&oacute; l&agrave; m&aacute;y phải sở hữu một vẻ ngo&agrave;i &ldquo;lộng lẫy&rdquo;, thu h&uacute;t mọi &aacute;nh nh&igrave;n.&nbsp;<span>V&agrave; thậm ch&iacute;&nbsp;Samsung&nbsp;c&ograve;n l&agrave;m tốt hơn như thế khi&nbsp;Samsung Galaxy S10+ sở hữu thiết kế 2 mặt k&iacute;nh đẹp mắt c&ugrave;ng việc loại bỏ đi cảm biến v&acirc;n tay ở mặt lưng gi&uacute;p m&aacute;y liền mạch hơn.</span></span></p>', 1, '12000000', '366a3f042e.png'),
+(8, 'Điện Thoại Huawei Pro', 'MH1124', '70', '1', '0', 5, 8, '<p>Nhắc đến điện thoại cao cấp của Huawei hầu hết mọi người đều nghĩ đến những chiếc m&aacute;y với loạt t&iacute;nh năng chụp ảnh chuy&ecirc;n nghiệp. Trong đ&oacute;, Huawei P50 Pro cũng kh&ocirc;ng ngoại lệ khi vừa ra đ&atilde; được xếp top 1 bảng xếp hạng điện thoại c&oacute; camera tốt nhất thế giới. Kh&ocirc;ng dừng tại đ&oacute;, P50 Pro c&ograve;n quy tụ nhiều t&iacute;nh năng tuyệt đỉnh hứa hẹn sẽ mang đến sự đột ph&aacute; mới cho người d&ugrave;ng</p>', 1, '5000000', '1e27d48822.jpg'),
+(9, 'IPad Xsmax', 'MH1125', '100', '0', '100', 3, 7, '<p>Cuối c&ugrave;ng si&ecirc;u phẩm mới của Apple đ&atilde; ra mắt mang theo một phi&ecirc;n bản iPhone XSmax &ndash; sở hữu c&aacute;i t&ecirc;n kh&aacute;c biệt so với c&aacute;c thế hệ trước, trang bị tới 6.5 inch đầu ti&ecirc;n của h&atilde;ng c&ugrave;ng c&aacute;c thiết kế cao cấp hiện đại. M&agrave;n h&igrave;nh OLED chất lượng cao rộng 6.5 inch đầu ti&ecirc;n của Apple</p>', 1, '8000000', 'f5a5f89e42.jpg'),
+(13, 'Đông Hồ Thông Minh Garmin Forerunner 245r', 'MH1126', '30', '1', '0', 16, 13, '<p><span>K&iacute;nh cường lực Corning Gorilla Glass 3, k&iacute;ch thước m&agrave;n h&igrave;nh(42.3 x 42.3), c&ocirc;ng ngh&ecirc;̣ MIP (b&ocirc;̣ nhớ trong từng đi&ecirc;̉m ảnh) ch&ocirc;́ng chói, bộ nhớ trong c&oacute; thể lưu trữ 500 b&agrave;i h&aacute;t,thời lượng pin 7 ng&agrave;y, chế dộ GPS 6 giờ v&agrave; GPS kh&ocirc;ng ph&aacute;t nhạc l&ecirc;n tới 24h, chuẩn chống nước 5ATM (50m),t&iacute;ch hợp GPS / GLONASS/GALILEO, Live track, VO2 max, bảo h&agrave;nh 1 năm</span></p>', 1, '4690000', 'bac03580db.png'),
+(15, 'Phần Mềm Diệt Virus BKAV Profressional 1 PC 12 Tháng', 'MH1127', '20', '0', '20', 7, 9, '<p><span>Bảo vệ chống lại c&aacute;c virus, phần mềm xấu, mối đe dọa tr&ecirc;n Internet,&nbsp;<span>Bảo vệ quyền ri&ecirc;ng tư của bạn v&agrave; ph&ograve;ng vệ trước h&agrave;nh vi trộm cắp danh t&iacute;nh,&nbsp;<span>Tăng th&ecirc;m lớp bảo mật cho hoạt động mua sắm &amp; ng&acirc;n h&agrave;ng trực tuyến,&nbsp;<span>Gi&uacute;p bạn giữ an to&agrave;n cho con trước c&aacute;c mối nguy hiểm từ Internet, v.v..</span></span></span></span></p>', 1, '195000', 'd892a2f1ef.jpg'),
+(16, 'TP - Link TL- WN725N - USB Wifi Nano 150Mbps', 'MH1128', '90', '0', '90', 17, 14, '<p>Card mạng wifi USB TP-Link TL-WN725N Wireless N150Mbps, sử dụng chuẩn USB wifi phổ biến với mọi m&aacute;y t&iacute;nh PC v&agrave; laptop, tốc độ cao ch&iacute;nh h&atilde;ng. M&aacute;y t&iacute;nh Tiến T&acirc;n l&agrave; nh&agrave; ph&acirc;n phối sản phẩm TP-Link ch&iacute;nh h&atilde;ng gi&aacute; tốt nhất to&agrave;n quốc</p>', 1, '125000', 'b3bf9f71ac.jpg'),
+(17, 'Ổ Cứng SSD Samsung 860 Evo 250GB Sata III 2.5 inch - Hàng Nhập Khẩu', 'MH1129', '100', '0', '100', 7, 6, '<p><span>Ổ cứng SSD Samsung 860 EVO 250GB 2.5" SATA III&nbsp; mang đến hiệu suất đọc ghi đ&aacute;ng kinh ngạc c&ugrave;ng với c&ocirc;ng nghệ&nbsp;Intelligent TurboWrite được trang bị tr&ecirc;n ổ cứng gi&uacute;p n&acirc;ng cao hiệu quả trong c&ocirc;ng việc cũng như giải tr&iacute;. Với c&ocirc;ng nghệ mới n&agrave;y, hiệu suất&nbsp;Samsung 860 EVO 250GB 2.5" SATA III&nbsp; được tăng l&ecirc;n 1.9 lần so với 840 Evo</span></p>', 1, '1099000', 'ad0bfd7a5d.jpg'),
+(18, 'Laptop Dell G7 7588 N7588A Core i7-8750H/Win10 (15.6 inch)', 'MH1130', '120', '0', '120', 3, 10, '<p><span>Cỗ m&aacute;y chiến game Dell Inspiron 7588 được ra mắt với G5 v&agrave;o năm 2018. Ch&uacute;ng c&oacute; thiết kế gần như nhau, nhưng Dell Inspiron 7588 đi k&egrave;m với c&aacute;c t&iacute;nh năng tốt hơn. Hiệu suất của n&oacute; l&agrave; đ&aacute;ng kể so với Inspiron 15 7000 v&agrave; Dell G3 / G5 do bộ vi xử l&yacute; nhanh hơn v&agrave; phần cứng cực mạnh. Khung gầm bằng nhựa 99% nhưng b&ugrave; v&agrave;o đ&oacute; n&oacute; lại c&oacute; cấu tr&uacute;c b&ecirc;n trong độc đ&aacute;o. Một Backlit m&agrave;u xanh đ&atilde; gi&uacute;p Dell cho m&aacute;y t&iacute;nh x&aacute;ch tay n&agrave;y một c&aacute;i nh&igrave;n tốt hơn giống như ch&uacute;ng ta đ&atilde; thấy tr&ecirc;n Alienware R5 2018. M&agrave;n h&igrave;nh độc lập với g&oacute;c nh&igrave;n gi&uacute;p tăng cường trải nghiệm chơi game. T&ugrave;y chọn 4K UHD khả dụng nếu bạn chọn định cấu h&igrave;nh hoặc n&acirc;ng cấp.</span></p>', 1, '2589900', 'c3fb5d9a14.jpg'),
+(19, 'Thiết Bị Thông Minh Apple Watch Series 4 GPS Aluminum Case With Sport Loop', 'MH1140', '65', '0', '65', 16, 7, '<p><span>Apple Watch Series 4 l&agrave; chiếc Apple Watch c&oacute; m&agrave;n h&igrave;nh lớn nhất từ trước đến nay. Với những nỗ lực thu hẹp viền m&agrave;n h&igrave;nh, Apple Watch 4 c&oacute; m&agrave;n h&igrave;nh lớn hơn tới 30% trong khi đ&oacute; k&iacute;ch thước vẫn kh&ocirc;ng thay đổi đ&aacute;ng kể so với thế hệ cũ. M&agrave;n h&igrave;nh n&agrave;y c&ograve;n c&oacute; c&ocirc;ng nghệ hiển thị mới LTPO tiết kiệm điện năng hơn, cho ph&eacute;p bạn sử dụng thoải m&aacute;i cả ng&agrave;y chỉ sau một lần sạc.</span></p>', 1, '9700000', '06c0a18d5a.jpg'),
+(20, 'Router Wifi 4G Huawei 300Mbps B593S-12', 'MH1150', '70', '17', '-16', 17, 8, '<p>Huawei E3372s-325 l&agrave; USB 4G rất phổ biến tr&ecirc;n thị trường do c&aacute;ch hoạt&nbsp; động đơn gi&agrave;n " Cắm L&agrave; Chạy " kh&ocirc;ng cần c&agrave;i đặt th&ecirc;m phần mềm. Ngo&agrave;i ra Huawei E3372s-325 c&ograve;n c&oacute; thể hoạt động tốt với c&aacute;c router ph&aacute;t Wi-Fi gắn USB 4G để cấp internet hoặc Backup trong trường hợp mạng d&acirc;y bị trục trặc như Tp-Link, Draytek...</p>', 1, '1240000', '8481dc5b6c.jpg'),
+(21, 'Apple New For Mysql Server', 'MH1115', '48', '0', '48', 17, 14, '<p>Apple New For Mysql Server</p>', 1, '50000', '7c78e0a3b0.jpg'),
+(22, 'Apple New For Mysql Server', 'MH1111', '95', '31', '-30', 17, 14, '<p>Apple New For Mysql Server</p>', 1, '60000', '66128fbcdf.jpeg'),
+(23, 'Máy tính HP1001', 'MT101', '100', '4', '-3', 3, 0, '<p>L&agrave; d&ograve;ng m&aacute;y t&iacute;nh cao cấp trong văn ph&ograve;ng, gi&uacute;p người sử dụng c&oacute; những trải nghiệm tốt nhất, hiện tại đ&acirc;y l&agrave; một trong những sản phẩm b&aacute;n chạy nhất b&ecirc;n cửa h&agrave;ng với những đ&aacute;nh gi&aacute; t&iacute;ch cực từ ph&iacute;a kh&aacute;ch h&agrave;ng</p>', 1, '15500000', 'e9709e5099.jpeg');
 
 -- --------------------------------------------------------
 

@@ -47,11 +47,11 @@ if (!isset($_GET['cusid']) || $_GET['cusid'] == NULL) {
                         ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $i ?></td>
-                                    <td><?php echo $result['name'] ?></td>
-                                    <td><?php echo $result['email'] ?></td>
-                                    <td><?php echo $result['phone'] ?></td>
-                                    <td><?php echo $result['comment'] ?></td>
-                                    <td><a href="?cusid=<?php echo $result['cusId'] ?>">Xóa</a></td>
+                                    <td><?php echo $result['customer_name'] ?></td>
+                                    <td><?php echo $result['customer_email'] ?></td>
+                                    <td><?php echo $result['customer_phone'] ?></td>
+                                    <td><?php echo $result['customer_comment'] ?></td>
+                                    <td><a href="?cusid=<?php echo $result['id'] ?>">Xóa</a></td>
                                 </tr>
                         <?php
                             }
