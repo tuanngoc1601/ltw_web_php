@@ -347,6 +347,14 @@ ALTER TABLE `tbl_cart`
 ALTER TABLE `tbl_category`
   ADD PRIMARY KEY (`catId`);
 
+
+--
+-- Chỉ mục cho bảng `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  ADD PRIMARY KEY (`id`);
+
+
 --
 -- Chỉ mục cho bảng `tbl_compare`
 --
@@ -416,6 +424,14 @@ ALTER TABLE `tbl_cart`
 --
 ALTER TABLE `tbl_category`
   MODIFY `catId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+
+--
+-- AUTO_INCREMENT cho bảng `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_compare`
