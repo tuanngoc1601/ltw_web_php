@@ -7,9 +7,9 @@
 				<div class="col_1_of_4 span_1_of_4">
 					<h4>Liên hệ chúng tôi</h4>
 						<ul>
-							<li><span>ĐT:0931930885</span></li>
-							<li><span>Email:xuannguyenngo@gmail.com</span></li>
-							<li><span>Đc:12 kiệt 289 Bùi thị Xuân,TP Huế</span></li>
+							<li><span>ĐT:0853797188</span></li>
+							<li><span>Email:tuanngoc12340@gmail.com</span></li>
+							<li><span>Đc:Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</span></li>
 						</ul>
 						<div class="social-icons">
 							<h4>Theo dõi chúng tôi</h4>
@@ -22,10 +22,7 @@
 						     </ul>
    	 					</div>
 				</div>
-			</div>
-			<div class="copy_right">
-				<p>DIY HUẾ </p>
-		   </div>
+			</div>			
      </div>
     </div>
     
@@ -46,7 +43,7 @@
 	</script>
 
     <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-    <a href="https://www.facebook.com/DIY-HU%E1%BA%BE-394643974593116/?modal=admin_todo_tour" id="toTop1" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+    <a href="https://www.facebook.com/profile.php?id=100028414459836" id="toTop1" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
     <link href="css/flexslider.css" rel='stylesheet' type='text/css' />
 	  <script defer src="js/jquery.flexslider.js"></script>
 	  <script type="text/javascript">

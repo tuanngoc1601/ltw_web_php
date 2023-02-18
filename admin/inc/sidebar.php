@@ -19,13 +19,13 @@
                         <li><a href="warehouse.php">Quản lý kho</a> </li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Hướng dẫn</a>
+                <!-- <li><a class="menuitem">Hướng dẫn</a>
                     <ul class="submenu">
                         <li><a href="directadd.php">Thêm hướng dẫn</a> </li>
                         <li><a href="directlist.php">Danh sách hướng dẫn</a> </li>
 
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
