@@ -45,12 +45,18 @@
     $('#dc_mega-menu-orange').dcMegaMenu({rowItems:'4',speed:'fast',effect:'fade'});
   });
 </script>
+<style>
+	.hust{
+		height: 200px;
+		/* width: auto; */
+	}
+</style>
 </head>
 <body>
   <div class="wrap">
 		<div class="header_top">
-			<div class="logo">
-				<a href="index.php"><img src="images/2020-01-10.png" alt="" /></a>
+			<div class="logo">				
+				<a href="index.php"><img class="hust" src="images/hustlogo.png" alt="" /></a>
 			</div>
 
 			  <div class="header_top_right">
@@ -109,7 +115,7 @@
 	  <li><a href="products.php">Sản phẩm</a> </li>
 	  <li><a href="cart.php">Giỏ hàng</a></li>
 	  <li><a href="contact.php">Liên hệ</a> </li>
-	  <li><a href="direct.php">Hướng dẫn</a> </li>
+	  <!-- <li><a href="direct.php">Hướng dẫn</a> </li> -->
 	  <?php
 	  $login_check = Session::get('customer_login');
 	  if($login_check==false)

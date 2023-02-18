@@ -46,11 +46,11 @@
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="img/2020-01-10.png" alt="Logo" />
+                    <img src="img/hustlogo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
-					<h1>DIY HUẾ</h1>
-					<p>Chuyên máy CNC khắc,laser,in 3D,máy vẽ</p>
+					<h1>SHOP BKA</h1>
+					<p>Chuyên bán các loại thiết bị điện tử, laptop, đồng hồ, thiết bị thông minh</p>
 				</div>
                 <div class="floatright">
                     <div class="floatleft">

@@ -5,7 +5,7 @@
     </div>
     <div id="site_info">
         <p>
-         &copy; Copyright <a href="http://trainingwithliveproject.com">@2020</a>.Kênh Sáng tạo công nghệ.
+         &copy; GVHD <a href="https://www.mica.edu.vn/perso/kiendt/">@Đào Trung Kiên</a>.SOICT.
         </p>
     </div>
 </body>
