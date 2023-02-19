@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 17, 2019 lúc 04:13 AM
+-- Thời gian đã tạo: Th11 17, 2022 lúc 04:13 AM
 -- Phiên bản máy phục vụ: 10.1.40-MariaDB
 -- Phiên bản PHP: 7.3.5
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `web_mvcphu`
+-- Cơ sở dữ liệu: `web_php`
 --
 
 -- --------------------------------------------------------
@@ -141,19 +141,6 @@ CREATE TABLE `tbl_comment` (
   `customer_comment` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Cấu trúc bảng cho bảng `tbl_compare`
---
-
-CREATE TABLE `tbl_compare` (
-  `id` int(11) NOT NULL,
-  `customer_id` int(11) NOT NULL,
-  `productId` int(11) NOT NULL,
-  `productName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `price` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
 -- --------------------------------------------------------
 
 --
@@ -177,7 +164,7 @@ CREATE TABLE `tbl_customer` (
 --
 
 INSERT INTO `tbl_customer` (`id`, `name`, `address`, `city`, `country`, `zipcode`, `phone`, `email`, `password`) VALUES
-(7, 'Tuan Ngoc', '153 Hung Thanh, Hung Hoa B', 'Ho Chi Minh', 'Viet Nam', '700000', '0338597737', 'abc@gmail.com', '1f5bcd9d6f3df4a37d3026657301909d'),
+(7, 'Tuan Ngoc', '153 Hung Thanh, Hung Hoa B', 'Ho Chi Minh', 'Viet Nam', '700000', '0338597737', 'abc@gmail.com', '1f5bcd9d6f3df4a37d3026657301909d');
 
 -- --------------------------------------------------------
 
@@ -247,31 +234,6 @@ INSERT INTO `tbl_product` (`productId`, `productName`, `product_code`, `productQ
 (21, 'Apple New For Mysql Server', 'MH1115', '48', '0', '48', 17, 14, '<p>Apple New For Mysql Server</p>', 1, '50000', '7c78e0a3b0.jpg'),
 (22, 'Apple New For Mysql Server', 'MH1111', '95', '31', '-30', 17, 14, '<p>Apple New For Mysql Server</p>', 1, '60000', '66128fbcdf.jpeg'),
 (23, 'Máy tính HP1001', 'MT101', '100', '4', '-3', 3, 0, '<p>L&agrave; d&ograve;ng m&aacute;y t&iacute;nh cao cấp trong văn ph&ograve;ng, gi&uacute;p người sử dụng c&oacute; những trải nghiệm tốt nhất, hiện tại đ&acirc;y l&agrave; một trong những sản phẩm b&aacute;n chạy nhất b&ecirc;n cửa h&agrave;ng với những đ&aacute;nh gi&aacute; t&iacute;ch cực từ ph&iacute;a kh&aacute;ch h&agrave;ng</p>', 1, '15500000', 'e9709e5099.jpeg');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `tbl_slider`
---
-
-CREATE TABLE `tbl_slider` (
-  `sliderId` int(11) NOT NULL,
-  `sliderName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `slider_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `type` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `tbl_slider`
---
-
-INSERT INTO `tbl_slider` (`sliderId`, `sliderName`, `slider_image`, `type`) VALUES
-(5, 'slider1', '720bc173fa.png', 0),
-(6, 'slider2', 'ff79579ac7.png', 0),
-(7, 'slider3', 'a94222690e.png', 0),
-(8, 'slider4', '5b2e64d6ab.jpg', 1),
-(9, 'slider5', 'f50b2e4171.png', 1),
-(11, 'slider6', '72a159f760.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -354,13 +316,6 @@ ALTER TABLE `tbl_category`
 ALTER TABLE `tbl_comment`
   ADD PRIMARY KEY (`id`);
 
-
---
--- Chỉ mục cho bảng `tbl_compare`
---
-ALTER TABLE `tbl_compare`
-  ADD PRIMARY KEY (`id`);
-
 --
 -- Chỉ mục cho bảng `tbl_customer`
 --
@@ -378,12 +333,6 @@ ALTER TABLE `tbl_order`
 --
 ALTER TABLE `tbl_product`
   ADD PRIMARY KEY (`productId`);
-
---
--- Chỉ mục cho bảng `tbl_slider`
---
-ALTER TABLE `tbl_slider`
-  ADD PRIMARY KEY (`sliderId`);
 
 --
 -- Chỉ mục cho bảng `tbl_warehouse`
@@ -432,13 +381,6 @@ ALTER TABLE `tbl_category`
 ALTER TABLE `tbl_comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
-
---
--- AUTO_INCREMENT cho bảng `tbl_compare`
---
-ALTER TABLE `tbl_compare`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT cho bảng `tbl_customer`
 --
@@ -456,12 +398,6 @@ ALTER TABLE `tbl_order`
 --
 ALTER TABLE `tbl_product`
   MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
-
---
--- AUTO_INCREMENT cho bảng `tbl_slider`
---
-ALTER TABLE `tbl_slider`
-  MODIFY `sliderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_warehouse`

@@ -27,38 +27,38 @@
     	}
     	$email = $result_customer['email'];
 
-    	$mail = new PHPMailer;
+    	// $mail = new PHPMailer;
 
-					//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+		// 			$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-					$mail->isSMTP();                                      // Set mailer to use SMTP
-					$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-					$mail->SMTPAuth = true;                               // Enable SMTP authentication
-					$mail->Username = 'xuannguyenngo@gmail.com';                 // SMTP username
-					$mail->Password = 'ngoxop2019';                           // SMTP password
-					//$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-					$mail->Port = 25;                                    // TCP port to connect to
+		// 			$mail->isSMTP();                                      // Set mailer to use SMTP
+		// 			$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+		// 			$mail->SMTPAuth = true;                               // Enable SMTP authentication
+		// 			$mail->Username = 'tuanngoc12340@gmail.com';                 // SMTP username
+		// 			$mail->Password = '1234tuanngoc';                           // SMTP password
+		// 			//$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+		// 			$mail->Port = 587;                                    // TCP port to connect to
 
-					$mail->setFrom('xuannguyenngo@gmail.com', 'Mailer');
-					$mail->addAddress($email, 'Joe User');     // Add a recipient
-					//$mail->addAddress('ellen@example.com');               // Name is optional
-					//$mail->addReplyTo('info@example.com', 'Information');
-					//$mail->addCC('cc@example.com');
-					//$mail->addBCC('bcc@example.com');
+		// 			$mail->setFrom('tuanngoc12340@gmail.com', 'Tuan Ngoc');
+		// 			$mail->addAddress($email, 'Tuan Ngoc');     // Add a recipient
+		// 			// $mail->addAddress('ellen@example.com');               // Name is optional
+		// 			//$mail->addReplyTo('info@example.com', 'Information');
+		// 			//$mail->addCC('cc@example.com');
+		// 			//$mail->addBCC('bcc@example.com');
 
-					//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-					//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-					$mail->isHTML(true);                                  // Set email format to HTML
+		// 			//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+		// 			//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+		// 			$mail->isHTML(true);                                  // Set email format to HTML
 
-					$mail->Subject = 'DIYHUE';
-					$mail->Body    = 'Đơn hàng của quý khách đã được xác nhận.Cảm ơn quý khách đã tin tưởng shop và đặt hàng sản phẩm,quý khách hãy theo dõi đơn hàng và xác nhận cho chúng tôi nếu quý khách đã nhận hàng,xin cám ơn quý khách';
-					$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-										if(!$mail->send()) {
-					    echo 'email chưa được gửi đến khách hàng';
-					    echo 'Mailer Error: ' . $mail->ErrorInfo;
-					} else {
-					    echo 'đã gửi đến email khách hàng';
-					}
+		// 			$mail->Subject = 'SHOP BKA';
+		// 			$mail->Body    = 'Đơn hàng của quý khách đã được xác nhận.Cảm ơn quý khách đã tin tưởng shop và đặt hàng sản phẩm,quý khách hãy theo dõi đơn hàng và xác nhận cho chúng tôi nếu quý khách đã nhận hàng,xin cám ơn quý khách';
+		// 			$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+		// 								if(!$mail->send()) {
+		// 			    echo 'email chưa được gửi đến khách hàng';
+		// 			    echo 'Mailer Error: ' . $mail->ErrorInfo;
+		// 			} else {
+		// 			    echo 'đã gửi đến email khách hàng';
+		// 			}
     }
 
     if(isset($_GET['delid'])){

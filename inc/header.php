@@ -47,8 +47,7 @@
 </script>
 <style>
 	.hust{
-		height: 200px;
-		/* width: auto; */
+		height: 130px;
 	}
 </style>
 </head>
